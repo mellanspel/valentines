@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mellanspel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Pixels&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://raw.githubusercontent.com/mellanspel/valentines/refs/heads/main/ico.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: white;
+            color: black;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            cursor: url(https://cur.cursors-4u.net/cursors/cur-11/cur1046.cur), auto !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .no-select {
+            user-select: none;
+        }
+        .heart {
+            cursor: pointer;
+            width: 500px;
+            height: 500px;
+            background-image: url('https://raw.githubusercontent.com/mellanspel/valentines/refs/heads/main/heart%20png.png');
+            background-size: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .top-left-text {
+            color: hotpink;
+            text-align: center;
+            z-index: 2;
+            position: relative;
+            top: -15%;
+        }
+        .thank-you-text {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .from-mellanspel-text {
+            font-family: 'Rubik Pixels', sans-serif;
+            font-size: 44px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 10);
+            color: #fbda1c;
+            cursor: pointer;
+        }
+        .thank-you-text span {
+            display: inline-block;
+            animation: jump 0.5s infinite alternate;
+            animation-delay: calc(0.1s * var(--i));
+        }
+        @keyframes jump {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="heart" onclick="window.open('https://soundcloud.com/willyoubemyvalentine/', '_blank')"></div>
+    <div class="top-left-text no-select">
+        <div class="thank-you-text">
+            <span style="--i:0">t</span>
+            <span style="--i:1">h</span>
+            <span style="--i:2">a</span>
+            <span style="--i:3">n</span>
+            <span style="--i:4">k</span>
+            <span style="--i:5"> </span>
+            <span style="--i:6">u</span>
+            <span style="--i:7"> </span>
+            <span style="--i:8">f</span>
+            <span style="--i:9">o</span>
+            <span style="--i:10">r</span>
+            <span style="--i:11"> </span>
+            <span style="--i:12">l</span>
+            <span style="--i:13">i</span>
+            <span style="--i:14">s</span>
+            <span style="--i:15">t</span>
+            <span style="--i:16">e</span>
+            <span style="--i:17">n</span>
+            <span style="--i:18">i</span>
+            <span style="--i:19">n</span>
+            <span style="--i:20">g</span>
+        </div>
+        <div class="from-mellanspel-text" onclick="window.open('https://soundcloud.com/willyoubemyvalentine/', '_blank')">frm mellanspel 2 u</div>
+    </div>
+    <script>
+        let titles = ["mellanspel", "♥2 u♥"];
+        let currentIndex = 0;
+        setInterval(function() {
+            document.title = titles[currentIndex];
+            currentIndex = (currentIndex + 1) % titles.length;
+        }, 900);
+        document.addEventListener("contextmenu", function(event) {
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>
